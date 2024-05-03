@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'todo/todo_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:todo_example/routers/app_router.dart';
+import 'package:todo_example/widgets/app_size_config.dart';
 
 void main() {
   runApp(
@@ -11,19 +12,32 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const TodoScreen(),
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return OrientationBuilder(
+          builder: (context, orientation) {
+            AppSizeConfig().init(context);
+            return MaterialApp.router(
+              debugShowCheckedModeBanner: false,
+              title: 'Flutter Demo',
+              theme: ThemeData(
+                fontFamily: GoogleFonts.poppins().fontFamily,
+                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                useMaterial3: true,
+              ),
+              routeInformationParser: router.routeInformationParser,
+              routerDelegate: router.routerDelegate,
+              routeInformationProvider: router.routeInformationProvider,
+            );
+          },
+        );
+      },
     );
   }
 }

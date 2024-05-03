@@ -1,7 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_example/todo/model/todo_model.dart';
 import 'package:todo_example/todo/provider/todo_provider.dart';
+import 'package:todo_example/widgets/app_size_config.dart';
+import 'package:todo_example/widgets/app_textstyles.dart';
 
 class TodoScreen extends ConsumerStatefulWidget {
   const TodoScreen({super.key});
@@ -112,11 +116,9 @@ class _TodoScreenState extends ConsumerState<TodoScreen> {
         child: const Icon(Icons.add),
       ),
       body: state.todo!.isEmpty
-          ? const Center(
-              child: Text(
-                "What are you thinking!",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
+          ? Center(
+              child: Text("What are you thinking! ",
+                  style: AppTextStyles.titleLarge!),
             )
           : ListView.builder(
               itemCount: state.todo!.length,
