@@ -1,10 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:todo_example/core/shared/localexaple/loacal_data.dart';
 import 'package:todo_example/todo/model/todo_model.dart';
 import 'package:todo_example/todo/provider/todo_provider.dart';
-import 'package:todo_example/widgets/app_size_config.dart';
 import 'package:todo_example/widgets/app_textstyles.dart';
 
 class TodoScreen extends ConsumerStatefulWidget {
@@ -16,8 +14,9 @@ class TodoScreen extends ConsumerStatefulWidget {
 
 class _TodoScreenState extends ConsumerState<TodoScreen> {
   List<TodoModel> todoList = [];
+  final String email = '';
 
-  void _handleToDoChange(TodoModel todo) {
+  void handleToDoChange(TodoModel todo) {
     setState(() {
       todo.isCompleted = !todo.isCompleted!;
     });
@@ -111,6 +110,7 @@ class _TodoScreenState extends ConsumerState<TodoScreen> {
           _displayDialog(
             isType: true,
           );
+          LocalData.clearLocalStorage();
           // notifier.increase();
         },
         child: const Icon(Icons.add),
