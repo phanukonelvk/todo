@@ -1,29 +1,31 @@
+import 'package:todo_example/auth/data/model/sig_in_response_model.dart';
+
 class AuthState {
   final bool? _isLoading;
   final String? _error;
-  final bool? _isLoggedIn;
+  final SiginResponse? _siginModel;
 
   AuthState({
     bool? isLoading,
     String? error,
-    bool? isLoggedIn,
+    SiginResponse? siginModel,
   })  : _isLoading = isLoading,
         _error = error,
-        _isLoggedIn = isLoggedIn;
+        _siginModel = siginModel;
 
   bool? get isLoading => _isLoading;
   String? get error => _error;
-  bool? get isLoggedIn => _isLoggedIn;
+  SiginResponse? get siginModel => _siginModel;
 
   AuthState copyWith({
     String? error,
     bool? isLoading,
-    bool? isLoggedIn,
+    SiginResponse? siginModel,
   }) {
     return AuthState(
       error: error ?? _error,
       isLoading: isLoading ?? _isLoading,
-      isLoggedIn: isLoggedIn ?? _isLoggedIn,
+      siginModel: siginModel ?? _siginModel,
     );
   }
 }
