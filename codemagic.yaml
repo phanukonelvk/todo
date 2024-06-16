@@ -18,9 +18,6 @@ workflows:
         script: | 
           flutter test
         ignore_failure: true
-      - name: Move keystore to correct location
-        script: |
-          cp $/Users/lailaolab/Documents/todo/keystore.jks 
       - name: Build AAB with Flutter
         script: | 
           BUILD_NUMBER=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME" --tracks="$GOOGLE_PLAY_TRACK") + 1))      
