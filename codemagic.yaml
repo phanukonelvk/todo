@@ -16,3 +16,9 @@ workflows:
           flutter build apk
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
+    publishing:
+      email:
+        recipients:
+          - "phanukonelvk@gmail.com"
+          - "teynajah@gmail.com"
+        
