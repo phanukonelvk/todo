@@ -10,7 +10,7 @@ workflows:
           flutter packages get
       - name: Build APK
         script: |
-          flutter build apk
+          flutter build apk --verbose
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
     publishing:
