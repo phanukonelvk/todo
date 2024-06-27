@@ -30,11 +30,9 @@ class ProductRepoImpl implements ProductRepo {
           .createLocalDataSource(product: productModelRemoteDataScr);
       return right(productModelRemoteDataScr);
     } on SocketException catch (e) {
-      // log('1234');
       return left(AppServerFailure(
           '$e No internet connection and no local data available.'));
     } on AppServerException catch (e) {
-      log('AppServerException');
       ProductModel? productModel =
           await _productLocalDataSource!.getLocalDataSource();
       if (productModel != null) {
