@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:todo_example/auth/presentation/screen/auth_screen.dart';
+import 'package:todo_example/core/shared/catch_user_service/domain/provider/user_cache_provider.dart';
 import 'package:todo_example/core/shared/localexaple/loacal_data.dart';
 import 'package:todo_example/root_page.dart';
 import 'package:todo_example/splash/screen/splash_screen.dart';
@@ -19,33 +20,40 @@ final routerProvider = Provider<GoRouter>((ref) {
     initialLocation: '/',
     routes: [
       GoRoute(
-        path: '/${AppRoute.login.name}',
+        path: '/',
         name: AppRoute.login.name,
-        builder: (context, state) {
-          return const LoginScreen();
+        pageBuilder: (context, state) {
+          return MaterialPage(
+            child: const LoginScreen(),
+            key: state.pageKey,
+          );
         },
       ),
       GoRoute(
         path: '/${AppRoute.home.name}',
         name: AppRoute.home.name,
-        builder: (context, state) {
-          return const ProductScreen();
+        pageBuilder: (context, state) {
+          return MaterialPage(
+            key: state.pageKey,
+            child: const ProductScreen(),
+          );
         },
       ),
-      GoRoute(
-        path: '/',
-        name: AppRoute.root.name,
-        builder: (context, state) {
-          return const SplashScreen();
-        },
-      ),
+      // GoRoute(
+      //   path: '/',
+      //   name: AppRoute.root.name,
+      //   builder: (context, state) {
+      //     return const SplashScreen();
+      //   },
+      // ),
     ],
-    // redirect: (context, state) async {
-    //   bool isLoggedIn = await LocalData.isLoggedIn();
-    //   if (state.uri.toString() == '/' && isLoggedIn) {
-    //     return '/${AppRoute.home.name}';
-    //   }
-    //   return null;
-    // },
+    redirect: (context, state) async {
+      final repo = ref.watch(userLocalRepositoryProvider);
+      final isAuthenticated = await repo.hasUser();
+      if (isAuthenticated) {
+        return '/${AppRoute.home.name}';
+      }
+      return null;
+    },
   );
 });
