@@ -8,7 +8,7 @@ import 'package:todo_example/core/shared/local/storage_service.dart';
 import 'package:todo_example/core/typeDefs/type_defs.dart';
 
 abstract class UserDataSource {
-  String get storageKey;
+  // String get storageKey;
   FutureEither<SiginResponse> fetchUser();
   Future<bool> saveUser({required SiginResponse user});
   Future<bool> deleteUser();
@@ -20,7 +20,7 @@ class UserLocalDatasource extends UserDataSource {
   final StorageService? storageService;
   @override
   FutureEither<SiginResponse> fetchUser() async {
-    var data = await storageService!.get(key: storageKey);
+    var data = await storageService!.get(key: LocalKeyData.USER);
     if (data == null) {
       AppServerException('User not found');
     }
@@ -30,20 +30,19 @@ class UserLocalDatasource extends UserDataSource {
 
   @override
   Future<bool> saveUser({required SiginResponse user}) async {
-    return await storageService!.set(storageKey, jsonEncode(user.toJson()));
+    return await storageService!.set(LocalKeyData.USER, jsonEncode(user.toJson()));
   }
 
   @override
   Future<bool> has() async {
-    return await storageService!.has(storageKey);
+    return await storageService!.has(LocalKeyData.USER);
   }
 
   @override
   Future<bool> deleteUser() async {
-    return await storageService!.remove(storageKey);
-    
+    return await storageService!.remove(LocalKeyData.USER);
   }
 
-  @override
-  String get storageKey => LocalKeyData.USER;
+  // @override
+  // String get storageKey => LocalKeyData.USER;
 }

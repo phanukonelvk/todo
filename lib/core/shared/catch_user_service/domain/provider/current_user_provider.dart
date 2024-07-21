@@ -4,7 +4,7 @@ import 'package:todo_example/core/shared/catch_user_service/domain/provider/user
 
 final currentUserProvider = FutureProvider<SiginResponse?>((ref) async {
   final repository = ref.watch(userLocalRepositoryProvider);
-  final eitherType = (await repository.fetchUser());
+  final eitherType = await repository.fetchUser();
 
   return eitherType.fold((l) => null, (r) => r);
 });

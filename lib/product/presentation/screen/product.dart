@@ -21,6 +21,7 @@ class _ProductScreenState extends ConsumerState<ProductScreen> {
   void initState() {
     Future(() {
       ref.read(productStateNotifier.notifier).fetchProducData();
+      ref.read(productStateNotifier.notifier).fetchToken();
     });
 
     super.initState();

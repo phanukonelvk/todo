@@ -42,7 +42,6 @@ class AuthNotifier extends StateNotifier<AuthState> {
       },
       (r) async {
         // log('message Data : ${jsonDecode(r.toString())}');
-        await _userRepository!.saveUser(user: r);
         state = state.copyWith(
           isLoading: false,
           error: null,
