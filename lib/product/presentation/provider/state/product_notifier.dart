@@ -42,8 +42,7 @@ class ProductNotifier extends StateNotifier<ProductState> {
     state = state.copyWith(isloading: true);
 
     var data =
-        await _storageService!.getString(key: LocalKeyData.PRODUCT) as String;
-
+        await _storageService!.getString(key: LocalKeyData.USER) as String;
     if (data.isNotEmpty) {
       state = state.copyWith(token: data, isloading: false, error: null);
     } else {
