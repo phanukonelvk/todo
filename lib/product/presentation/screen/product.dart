@@ -86,12 +86,12 @@ class _ProductScreenState extends ConsumerState<ProductScreen> {
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),
                                   ),
-                                  Text(
-                                    "${currentUser!.firstName} ${currentUser.lastName}",
-                                    style: AppTextStyles.titleMedium!.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
+                                  // Text(
+                                  //   "${currentUser!.firstName} ${currentUser.lastName}",
+                                  //   style: AppTextStyles.titleMedium!.copyWith(
+                                  //       fontWeight: FontWeight.bold,
+                                  //       color: Colors.white),
+                                  // ),
                                 ],
                               ),
                               const Spacer(),
