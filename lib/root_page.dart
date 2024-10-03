@@ -12,11 +12,8 @@ class RootPage extends ConsumerStatefulWidget {
 }
 
 class _RootPageState extends ConsumerState<RootPage> {
-  
-
   @override
   void initState() {
-    
     super.initState();
   }
 
