@@ -18,9 +18,10 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
   @override
   Future<ProductModel> fetchProductRemoteDataSrc({int? skip}) async {
     try {
-      var page = {"skip": skip, "limit": AppTextMessage.PRODUCTS_PER_PAGE};
+      // var page = {"skip": skip, "limit": AppTextMessage.PRODUCTS_PER_PAGE};
       var res = await _apiClientSvc!.getMethodBearer(
-          path: AppAPIPath.productApiPath, queryParameters: page);
+        path: AppAPIPath.productApiPath,
+      );
       return ProductModel.fromJson(res);
     } on DioError catch (dioError) {
       debugPrint("productRemoteDataSrc dioError ${dioError.message}");
