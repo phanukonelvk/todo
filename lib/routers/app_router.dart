@@ -19,18 +19,18 @@ final routerProvider = Provider<GoRouter>((ref) {
     debugLogDiagnostics: true,
     initialLocation: '/',
     routes: [
+      // GoRoute(
+      //   path: '/',
+      //   name: AppRoute.login.name,
+      //   pageBuilder: (context, state) {
+      //     return MaterialPage(
+      //       child: const LoginScreen(),
+      //       key: state.pageKey,
+      //     );
+      //   },
+      // ),
       GoRoute(
         path: '/',
-        name: AppRoute.login.name,
-        pageBuilder: (context, state) {
-          return MaterialPage(
-            child: const LoginScreen(),
-            key: state.pageKey,
-          );
-        },
-      ),
-      GoRoute(
-        path: '/${AppRoute.home.name}',
         name: AppRoute.home.name,
         pageBuilder: (context, state) {
           return MaterialPage(
