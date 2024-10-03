@@ -56,165 +56,165 @@ class _ProductScreenState extends ConsumerState<ProductScreen> {
           : Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Container(
-                //   decoration: BoxDecoration(
-                //     color: Colors.green.shade300,
-                //     borderRadius: const BorderRadius.only(
-                //         bottomLeft:
-                //             Radius.circular(AppConstant.kBorderRadius12),
-                //         bottomRight:
-                //             Radius.circular(AppConstant.kBorderRadius12)),
-                //   ),
-                //   child: SafeArea(
-                //     child: Container(
-                //       margin: const EdgeInsets.symmetric(horizontal: 16),
-                //       child: Column(
-                //         mainAxisSize: MainAxisSize.min,
-                //         crossAxisAlignment: CrossAxisAlignment.start,
-                //         children: [
-                //           const SizedBox(
-                //             height: 20,
-                //           ),
-                //           Row(
-                //             children: [
-                //               Column(
-                //                 crossAxisAlignment: CrossAxisAlignment.start,
-                //                 children: [
-                //                   Text(
-                //                     "Wellcome ",
-                //                     style: AppTextStyles.titleMedium!.copyWith(
-                //                         fontWeight: FontWeight.bold,
-                //                         color: Colors.white),
-                //                   ),
-                //                   Text(
-                //                     "AppZap Pos",
-                //                     style: AppTextStyles.titleMedium!.copyWith(
-                //                         fontWeight: FontWeight.bold,
-                //                         color: Colors.white),
-                //                   ),
-                //                 ],
-                //               ),
-                //               const Spacer(),
-                //               Container(
-                //                 decoration: BoxDecoration(
-                //                     color: Colors.blueAccent,
-                //                     borderRadius: BorderRadius.circular(
-                //                         AppConstant.kBorderRadius12)),
-                //                 child: IconButton(
-                //                     onPressed: () {},
-                //                     icon: const Icon(
-                //                       Icons.settings,
-                //                       color: Colors.white,
-                //                     )),
-                //               ),
-                //               const SizedBox(
-                //                 width: 10,
-                //               ),
-                //               Container(
-                //                 decoration: BoxDecoration(
-                //                     color: Colors.blueAccent,
-                //                     borderRadius: BorderRadius.circular(
-                //                         AppConstant.kBorderRadius12)),
-                //                 child: IconButton(
-                //                     onPressed: () {},
-                //                     icon: const Icon(
-                //                       Icons.notifications,
-                //                       color: Colors.white,
-                //                     )),
-                //               )
-                //             ],
-                //           ),
-                //           const SizedBox(
-                //             height: 10,
-                //           ),
-                //           Container(
-                //             decoration: BoxDecoration(
-                //               borderRadius: BorderRadius.circular(
-                //                 AppConstant.kBorderRadius12,
-                //               ),
-                //               color: Colors.grey[200],
-                //             ),
-                //             child: Row(
-                //               crossAxisAlignment: CrossAxisAlignment.start,
-                //               children: [
-                //                 Expanded(
-                //                   child: TextFormField(
-                //                     // controller: passwordController,
-                //                     decoration: InputDecoration(
-                //                       hintStyle:
-                //                           AppTextStyles.bodyLarge!.copyWith(
-                //                               // fontWeight: FontWeight.bold,
-                //                               // color: Colors.grey,
-                //                               ),
-                //                       hintText: 'Search for article...',
-                //                       filled: true,
-                //                       fillColor: Colors.grey[200],
-                //                       contentPadding:
-                //                           const EdgeInsets.symmetric(
-                //                         horizontal: AppConstant.kBorderRadius16,
-                //                       ),
-                //                       border: OutlineInputBorder(
-                //                         borderSide: BorderSide.none,
-                //                         borderRadius: BorderRadius.circular(
-                //                             AppConstant.kBorderRadius12),
-                //                       ),
-                //                     ),
-                //                   ),
-                //                 ),
-                //                 Container(
-                //                   decoration: BoxDecoration(
-                //                       borderRadius: BorderRadius.circular(
-                //                         AppConstant.kBorderRadius12,
-                //                       ),
-                //                       color: Colors.blueAccent),
-                //                   child: IconButton(
-                //                       onPressed: () {},
-                //                       icon: SvgPicture.asset(
-                //                           'assets/icons/Group.svg')),
-                //                 )
-                //               ],
-                //             ),
-                //           ),
-                //           const SizedBox(
-                //             height: 20,
-                //           )
-                //         ],
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // const SizedBox(
-                //   height: 20,
-                // ),
-                // SizedBox(
-                //   height: 30,
-                //   child: ListView(
-                //     shrinkWrap: true,
-                //     scrollDirection: Axis.horizontal,
-                //     children: category
-                //         .map((e) => Container(
-                //               decoration: BoxDecoration(
-                //                   color: Colors.grey,
-                //                   borderRadius: BorderRadius.circular(
-                //                       AppConstant.kBorderRadius12)),
-                //               margin: const EdgeInsets.only(
-                //                   left: AppConstant.kBorderRadius16),
-                //               padding: const EdgeInsets.symmetric(
-                //                   horizontal: AppConstant.kBorderRadius12,
-                //                   vertical: AppConstant.kPadding4),
-                //               child: Text(
-                //                 e['category'].toString(),
-                //                 style: AppTextStyles.bodyMedium!.copyWith(
-                //                     color: Colors.white,
-                //                     fontWeight: FontWeight.bold),
-                //               ),
-                //             ))
-                //         .toList(),
-                //   ),
-                // ),
-                // const SizedBox(
-                //   height: 10,
-                // ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green.shade300,
+                    borderRadius: const BorderRadius.only(
+                        bottomLeft:
+                            Radius.circular(AppConstant.kBorderRadius12),
+                        bottomRight:
+                            Radius.circular(AppConstant.kBorderRadius12)),
+                  ),
+                  child: SafeArea(
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Wellcome ",
+                                    style: AppTextStyles.titleMedium!.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                  Text(
+                                    "AppZap Pos",
+                                    style: AppTextStyles.titleMedium!.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.blueAccent,
+                                    borderRadius: BorderRadius.circular(
+                                        AppConstant.kBorderRadius12)),
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.settings,
+                                      color: Colors.white,
+                                    )),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.blueAccent,
+                                    borderRadius: BorderRadius.circular(
+                                        AppConstant.kBorderRadius12)),
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.notifications,
+                                      color: Colors.white,
+                                    )),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                AppConstant.kBorderRadius12,
+                              ),
+                              color: Colors.grey[200],
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: TextFormField(
+                                    // controller: passwordController,
+                                    decoration: InputDecoration(
+                                      hintStyle:
+                                          AppTextStyles.bodyLarge!.copyWith(
+                                              // fontWeight: FontWeight.bold,
+                                              // color: Colors.grey,
+                                              ),
+                                      hintText: 'Search for article...',
+                                      filled: true,
+                                      fillColor: Colors.grey[200],
+                                      contentPadding:
+                                          const EdgeInsets.symmetric(
+                                        horizontal: AppConstant.kBorderRadius16,
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderSide: BorderSide.none,
+                                        borderRadius: BorderRadius.circular(
+                                            AppConstant.kBorderRadius12),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(
+                                        AppConstant.kBorderRadius12,
+                                      ),
+                                      color: Colors.blueAccent),
+                                  child: IconButton(
+                                      onPressed: () {},
+                                      icon: SvgPicture.asset(
+                                          'assets/icons/Group.svg')),
+                                )
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  height: 30,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: category
+                        .map((e) => Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  borderRadius: BorderRadius.circular(
+                                      AppConstant.kBorderRadius12)),
+                              margin: const EdgeInsets.only(
+                                  left: AppConstant.kBorderRadius16),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: AppConstant.kBorderRadius12,
+                                  vertical: AppConstant.kPadding4),
+                              child: Text(
+                                e['category'].toString(),
+                                style: AppTextStyles.bodyMedium!.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ))
+                        .toList(),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Expanded(
                     child: Container(
                   margin: const EdgeInsets.symmetric(
